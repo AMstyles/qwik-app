@@ -40,5 +40,14 @@
     "undici": "*",
     "vite": "^5.1.4",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "install": "^0.13.0",
+    "npm": "^10.5.1",
+    "phosphor-react": "^1.4.1",
+    "react-router": "^6.22.3"
   }
 }

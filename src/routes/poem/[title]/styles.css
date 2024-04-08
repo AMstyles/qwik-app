@@ -1,0 +1,25 @@
+.poem-page{
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poem-details {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.author {
+  font-style: italic;
+  color: #666;
+}
+
+.poem-line {
+  margin-bottom: 10px;
+}
