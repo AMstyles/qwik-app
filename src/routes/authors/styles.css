@@ -1,0 +1,183 @@
+/* THIS FILE IS JUST FOR EXAMPLES, DELETE IT IF YOU DON'T NEED IT */
+
+/* SHELL ---------------------------------------- */
+html {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+body {
+  background: var(--qwik-dark-background);
+  color: var(--qwik-dark-text);
+  overflow-x: hidden;
+}
+
+
+
+.poems-page{
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  width: 90%;
+  height: 4rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle 
+  
+  shadow */
+}
+
+.search input {
+  border-radius: 1rem 0 0 1rem;
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.search input::placeholder {
+  color: #999; /* Optional: Placeholder text color */
+}
+
+.search input:focus {
+  border: 2px solid #007bff; /* Optional: Add a border when input is focused */
+}
+
+.search button {
+  width: 10rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  height: 105%;
+  border-radius:0 1rem 1rem 0;
+  cursor: pointer;
+}
+
+
+.poems{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.poem{
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 25vw;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+.poem:hover{
+  background-color: black;
+  transition: 0.3s ease-in-out;
+transform: scale(1.02);
+}
+
+.poem-title{
+  font-weight: 600;
+  font-size: 25px;
+  text-overflow: ellipsis;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+/* TAGS ----------------------------------------- */
+a {
+  text-decoration: none;
+  color: var(--qwik-light-blue);
+}
+
+code {
+  background: rgba(230, 230, 230, 0.3);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* CONTAINER ------------------------------------ */
+.container {
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+.container.container-purple {
+  background: var(--qwik-light-purple);
+}
+.container.container-dark {
+  background: var(--qwik-dark-background);
+  color: var(--qwik-dark-text);
+}
+.container.container-center {
+  text-align: center;
+}
+.container.container-flex {
+  /* does nothing on mobile */
+}
+.container.container-spacing-xl {
+  padding: 50px 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 60px 80px;
+  }
+  .container.container-spacing-xl {
+    padding: 100px 60px;
+  }
+  .container.container-flex {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) {
+}

@@ -1,19 +1,20 @@
 import { component$, useSignal, useStore, useTask$, $ } from "@builder.io/qwik";
 import { DocumentHead, Link } from "@builder.io/qwik-city";
+import { table } from "console";
 
 export default component$(() => {
-  const poemStore = useStore({ poems: [] });
+  const poemStore = useStore({ authors: [] });
   const searchTerm = useSignal('');
   const isLoading = useSignal(false);
 
 
   useTask$(async () => {
     try {
-      const response = await fetch('https://poetrydb.org/random/21');
+      const response = await fetch('https://poetrydb.org/author');
       const data = await response.json();
-      poemStore.poems = data;
+      poemStore.authors = data;
     } catch (error) {
-      console.error('Error fetching poems:', error);
+      console.error('Error fetching authors:', error);
     }
   })
 
@@ -21,9 +22,11 @@ export default component$(() => {
   const search = $(async (searchTerm: string) => {
     isLoading.value = true;
     try {
-      const response = await fetch(` https://poetrydb.org/title,poemcount/${searchTerm};10`);
+      const response = await fetch(` https://poetrydb.org/author/${searchTerm}`);
+      console.log(response.json());
+      console.log(response.json());
       const data = await response.json();
-      poemStore.poems = data;
+      poemStore.authors = data;
 
     }
     catch (error) {
@@ -54,14 +57,14 @@ export default component$(() => {
         {
           !isLoading.value ?
             <div class={'poems'}>
-              {poemStore.poems.map((poem: { title: string, author: string, lines: string[] }) => (
+              {/* {poemStore.poems.map((poem: { title: string, author: string, lines: string[] }) => (
                 <Link href={`/poem/${poem.title}`} key={poem.title} class="poem">
 
                   <div class={'poem-title'}>{poem.title}</div>
                   <p>By {poem.author}</p>
 
                 </Link>
-              ))}
+              ))} */}
             </div> : <h1>Loading...</h1>
         }
 
